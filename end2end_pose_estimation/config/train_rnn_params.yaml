@@ -1,0 +1,32 @@
+
+
+# some parameters for the dataset, this is for coco
+num_joints: 17
+max_k: 5
+features_dim: 34
+num_hourglass_modules: 4
+# network parameters
+batch_size: 1
+
+#some paths
+#the path of the training images for the coco dataset
+train_im_path: '/media/datasets/pose_estimation/MSCOCO_2017/images/train2017/'
+# the path of the validation of images for the coco dataset
+val_im_path: '/media/datasets/pose_estimation/MSCOCO_2017/images/val2017/'
+#
+#
+
+#model params
+out_res: 128
+
+num_epochs: 4000
+weight_decay: 1e-5
+momentum: 0.0
+lr: 1e-4
+save_path: '/media/datasets/briq/pose_estimation/models/associative_embedding/iterative_lasttag_allhm_e4_e5_decay1_stop1_mask_backpropAE_finetuned_posetrack'
+#where a pretrained model is located for loading during training, or during testing
+checkpoint: '/media/datasets/briq/pose_estimation/models/associative_embedding/iterative_lasttags_allhm_e4_e5_decay1_stop1_backpropAE_epoch5.pth'
+
+
+
+stop_threshold: 0.1

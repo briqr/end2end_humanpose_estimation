@@ -1,0 +1,41 @@
+# some parameters for the dataset, this is for coco
+num_joints: 19
+max_k: 5
+heatmap_dim1: 46
+heatmap_dim2: 46
+features_dim: 128
+num_limbs: 19
+
+# network parameters
+batch_size: 1
+
+#some paths
+#the extracted features directory
+train_features_dir: '/media/datasets/briq/pose_estimation/coco_precomputed_features/coco/train/' #'/media/pose_estimation/Experiments/coco_precomputed_features/coco/'
+val_features_dir: '/media/datasets/briq/pose_estimation/coco_precomputed_features/coco/val/'
+#the path of the training images for the coco dataset
+train_im_path: '/media/datasets/pose_estimation/MSCOCO_2017/images/train2017/'
+# the path of the validation of images for the coco dataset
+val_im_path: '/media/datasets/pose_estimation/MSCOCO_2017/images/val2017/'
+#the path where the result will be saved
+result_path: '/media/datasets/briq/pose_estimation/Experiments/result_val.json'
+
+#
+# the keypoints gt of the training set
+train_gt_poses: '/media/datasets/briq/pose_estimation/coco_precomputed_features/coco/train/gt_poses_transformed/' # will be used for the OKS calculation, they are transformed using the$
+val_gt_poses: '/media/datasets/briq/pose_estimation/coco_precomputed_features/coco/val/gt_poses/' #these are the gt poses untransformed
+# the file list of the validation set
+train_img_list_path: '/media/datasets/briq/datasets/MSCOCO_2017/lists/train_filelist.txt'
+#the file list of the training set
+val_img_list_path: '/media/datasets/briq/datasets/MSCOCO_2017/lists/val_filelist.txt'
+
+#model params
+
+num_epochs: 1000
+weight_decay: 5e-5
+momentum: 0.9
+lr: 1e-5
+save_path: '/media/datasets/briq/pose_estimation/models/cnn/'
+checkpoint: '' #'/media/pose_estimation/toy/models/cnn/model_epoch_maxk_3_25.pth'
+
+

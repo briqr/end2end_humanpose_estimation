@@ -1,0 +1,20 @@
+
+
+# some parameters for the dataset, this is for coco
+num_joints: 17
+max_k: 30
+features_dim: 34
+num_hourglass_modules: 2
+
+# network parameters
+batch_size: 1
+
+train_im_path: '/media/datasets/pose_estimation/MSCOCO_2017/images/train2017/'
+# the path of the validation of images for the coco dataset
+val_im_path:   '/media/datasets/pose_estimation/MSCOCO_2017/images/val2017/'
+#the path where the result will be saved
+result_path: '/media/datasets/briq/pose_estimation/Experiments/result_val.json'
+
+checkpoint: '/media/datasets/briq/pose_estimation/models/associative_embedding/model_stop.pth'
+#where a pretrained model is located for loading during training, or during testing
+stop_threshold: 0.1
